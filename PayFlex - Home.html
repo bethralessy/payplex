@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)file:///C:/Users/bethr/Desktop/project/home.html# -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <title>PayFlex - Home</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Poppins', sans-serif;
+      background: #f3e8ff;
+      color: #4c1d95;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    header {
+      background: #7b2cbf;
+      padding: 20px;
+      color: #fff;
+      width: 100%;
+      text-align: center;
+    }
+
+    .button-container {
+      margin-top: 20px;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      background: #7b2cbf;
+      padding: 10px 0;
+    }
+
+    .button-container button {
+      background: #e0bbff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      color: #4c1d95;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .button-container button:hover {
+      background: #d0aaff;
+    }
+
+    .content-section {
+      display: none;
+      width: 90%;
+      max-width: 900px;
+      margin-top: 20px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .form-section {
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+    }
+
+    .form-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: #7b2cbf;
+    }
+
+    .form-section form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .form-section label {
+      font-weight: bold;
+    }
+
+    .form-section input, .form-section select {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+      width: 100%;
+    }
+
+    .form-section button {
+      padding: 10px;
+      background: #7b2cbf;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .form-section button:hover {
+      background: #5a1e8d;
+    }
+
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>PayFlex</h1>
+  <div class="balance">Earnings: Ksh176.80</div>
+</header>
+
+<!-- Navigation buttons -->
+<div class="button-container">
+  <button onclick="showContent(&#39;profile&#39;)">1. Profile</button>
+  <button onclick="showContent(&#39;surveys&#39;)">2. Surveys</button>
+  <button onclick="showContent(&#39;payment&#39;)">3. Payment</button>
+  <button onclick="showContent(&#39;about&#39;)">4. About</button>
+  <button onclick="showContent(&#39;help&#39;)">5. Help</button>
+</div>
+
+<!-- Profile content -->
+<div id="profile" class="content-section" style="display: block;">
+  <h2>Enter Profile Information</h2>
+  <form action="file:///C:/Users/bethr/Desktop/project/home.html#" method="POST">
+    <label for="gender">Gender</label>
+    <select id="gender" name="gender" required="">
+      <option value="">Select Gender</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="address">Address</label>
+    <input type="text" id="address" name="address" placeholder="Enter your address" required="">
+
+    <label for="dob">Date of Birth</label>
+    <input type="date" id="dob" name="dob" required="">
+
+    <button type="submit">Save Profile</button>
+  </form>
+</div>
+
+<!-- Surveys content -->
+<div id="surveys" class="content-section" style="display: none;">
+
+ 
+      <h1>Environmental and Health Survey</h1>
+    <form id="survey-form">
+        <!-- Question 1 -->
+        <div class="question">
+            <label>1. How often do you recycle?</label><br>
+            <input type="radio" name="q1" value="A"> Always
+            <input type="radio" name="q1" value="B"> Sometimes
+            <input type="radio" name="q1" value="C"> Rarely
+            <input type="radio" name="q1" value="D"> Never
+        </div>
+
+        <!-- Question 2 -->
+        <div class="question">
+            <label>2. Do you use reusable bags when shopping?</label><br>
+            <input type="radio" name="q2" value="A"> Always
+            <input type="radio" name="q2" value="B"> Most of the time
+            <input type="radio" name="q2" value="C"> Occasionally
+            <input type="radio" name="q2" value="D"> Never
+        </div>
+
+        <!-- Question 3 -->
+        <div class="question">
+            <label>3. How concerned are you about climate change?</label><br>
+            <input type="radio" name="q3" value="A"> Extremely concerned
+            <input type="radio" name="q3" value="B"> Moderately concerned
+            <input type="radio" name="q3" value="C"> Slightly concerned
+            <input type="radio" name="q3" value="D"> Not concerned at all
+        </div>
+
+        <!-- Question 4 -->
+        <div class="question">
+            <label>4. How often do you use plastic bottles?</label><br>
+            <input type="radio" name="q4" value="A"> Never
+            <input type="radio" name="q4" value="B"> Occasionally
+            <input type="radio" name="q4" value="C"> Often
+            <input type="radio" name="q4" value="D"> Daily
+        </div>
+
+        <!-- Question 5 -->
+        <div class="question">
+            <label>5. Do you practice energy conservation at home?</label><br>
+            <input type="radio" name="q5" value="A"> Yes, always
+            <input type="radio" name="q5" value="B"> Sometimes
+            <input type="radio" name="q5" value="C"> Rarely
+            <input type="radio" name="q5" value="D"> Never
+        </div>
+
+        <!-- Question 6 -->
+        <div class="question">
+            <label>6. How often do you exercise per week?</label><br>
+            <input type="radio" name="q6" value="A"> 5 or more days
+            <input type="radio" name="q6" value="B"> 3–4 days
+            <input type="radio" name="q6" value="C"> 1–2 days
+            <input type="radio" name="q6" value="D"> Never
+        </div>
+
+        <!-- Question 7 -->
+        <div class="question">
+            <label>7. How would you rate your overall health?</label><br>
+            <input type="radio" name="q7" value="A"> Excellent
+            <input type="radio" name="q7" value="B"> Good
+            <input type="radio" name="q7" value="C"> Fair
+            <input type="radio" name="q7" value="D"> Poor
+        </div>
+
+        <!-- Question 8 -->
+        <div class="question">
+            <label>8. Do you regularly check your health metrics (e.g., blood pressure, cholesterol)?</label><br>
+            <input type="radio" name="q8" value="A"> Yes, regularly
+            <input type="radio" name="q8" value="B"> Occasionally
+            <input type="radio" name="q8" value="C"> Rarely
+            <input type="radio" name="q8" value="D"> Never
+        </div>
+
+        <!-- Question 9 -->
+        <div class="question">
+            <label>9. How much water do you drink daily?</label><br>
+            <input type="radio" name="q9" value="A"> 8+ cups
+            <input type="radio" name="q9" value="B"> 5–7 cups
+            <input type="radio" name="q9" value="C"> 2–4 cups
+            <input type="radio" name="q9" value="D"> Less than 2 cups
+        </div>
+
+        <!-- Question 10 -->
+        <div class="question">
+            <label>10. How often do you experience stress or anxiety?</label><br>
+            <input type="radio" name="q10" value="A"> Frequently
+            <input type="radio" name="q10" value="B"> Occasionally
+            <input type="radio" name="q10" value="C"> Rarely
+            <input type="radio" name="q10" value="D"> Never
+        </div>
+
+    <button type="button" onclick="calculateSurvey()">Submit Survey</button>
+  </form>
+</div>
+
+<!-- Payment content -->
+<div id="payment" class="content-section" style="display: none;">
+  <h2>Payment Required</h2>
+  <p>Please deposit 99 to activate your account. Enter your phone number below to continue.</p>
+  <label for="phone-number">Phone Number (+254):</label>
+  <input type="text" id="phone-number" placeholder="07" required="">
+  <p><strong>Amount: 99 sh</strong></p>
+  <button type="button" onclick="processPayment()">Send Payment</button>
+</div>
+
+<!-- About content -->
+<div id="about" class="content-section" style="display: none;">
+  <h1>Terms and Conditions for PayPlex Account</h1>
+  <p></p><h1>Terms and Conditions for PayPlex Account</h1>
+<p>These Terms and Conditions (the "Agreement") govern your use of the PayPlex service, which is provided by PayPlex Technologies ("PayPlex," "we," "us," or "our"). By registering for and using a PayPlex account, you agree to comply with and be bound by the following terms. If you do not agree to these terms, do not use the PayPlex service.
+&gt;<br>
+1. Account Registration
+To use PayPlex, you must create an account by providing accurate, complete, and current information as requested during the registration process. You must be at least 18 years old to register for a PayPlex account.
+<br>
+2. Account Security
+You are responsible for maintaining the confidentiality of your PayPlex account login credentials, including your password. You agree to notify PayPlex immediately if you believe your account has been compromised or unauthorized access has occurred.
+<br>
+3. Use of PayPlex
+PayPlex allows users to send and receive payments, manage accounts, and access various financial services. You agree to use PayPlex only for lawful purposes and in accordance with applicable laws and regulations. You shall not use PayPlex for any illegal activities, including but not limited to fraud, money laundering, or the financing of terrorism.
+<br>
+4. Fees
+PayPlex charges certain fees for transactions, which will be disclosed to you at the time of the transaction. We reserve the right to change our fees at any time, and such changes will be communicated to you in advance.
+<br>
+5. Payments and Transactions
+Transactions made via PayPlex are processed securely. By using PayPlex to send or receive payments, you authorize PayPlex to debit or credit your linked account, debit card, or credit card as necessary. You agree to pay for all services, goods, and transactions made through PayPlex.
+<br>
+6. Refunds
+All transactions are final once processed. Refunds for payments made through PayPlex will only be issued according to the refund policy of the merchant or service provider, or if the transaction is found to be fraudulent or unauthorized.
+<br>
+7. Privacy and Data Protection
+PayPlex is committed to protecting your privacy. By agreeing to these Terms and Conditions, you consent to the collection and processing of your personal data in accordance with PayPlex’s Privacy Policy. We will never share your financial information with third parties without your consent, except as required by law.
+<br>
+8. Suspension or Termination of Account
+PayPlex reserves the right to suspend or terminate your account at any time, without notice, if we believe you have violated this Agreement or engaged in fraudulent activity. You may terminate your account by contacting PayPlex support.
+<br>
+9. Limitation of Liability
+PayPlex will not be liable for any loss or damage, including but not limited to, indirect, incidental, special, or consequential damages arising out of or in connection with your use of the service, whether or not we have been advised of the possibility of such damages. Our liability is limited to the amount of funds in your PayPlex account at the time of the issue.
+<br>
+10. Dispute Resolution
+Any disputes arising from your use of PayPlex will be resolved through binding arbitration in accordance with the laws of the jurisdiction in which PayPlex operates. You waive your right to participate in a class action lawsuit.
+<br>
+11. Modifications to the Agreement
+PayPlex reserves the right to update or modify these Terms and Conditions at any time. Any changes will be posted on the PayPlex website or communicated via email. Continued use of the service after such changes constitutes your acceptance of the updated terms.
+<br>
+12. Governing Law
+This Agreement shall be governed by and construed in accordance with the laws of the jurisdiction where PayPlex operates, without regard to its conflict of law principles.
+<br>
+13. Third-Party Links
+PayPlex may contain links to third-party websites or services. We do not control or endorse any third-party sites and are not responsible for their content or actions. Use of third-party services is at your own risk.
+
+</p>
+</div>
+
+<!-- Help content -->
+<div id="help" class="content-section" style="display: none;">
+  <h2>Help and Support</h2>
+  <p>If you have any issues, you can contact our support team:</p>
+  <p>Email: support@payplex.com</p>
+  <p>Phone: +254 723 000 100</p>
+</div>
+
+<script>
+  // Function to show the content for the clicked button
+  function showContent(contentId) {
+    // Hide all content sections
+    const sections = document.querySelectorAll('.content-section');
+    sections.forEach(section => section.style.display = 'none');
+    
+    // Show the clicked content section
+    const content = document.getElementById(contentId);
+    content.style.display = 'block';
+  }
+
+  // Initial content display
+  showContent('profile'); // Default content to show when the page loads
+
+  // Function to handle survey submission
+  function calculateSurvey() {
+    const questions = document.querySelectorAll('.question');
+    let totalAmount = 0;
+
+    // Loop through each question and check if an option is selected
+    questions.forEach((question) => {
+      const selectedOption = question.querySelector('input[type="radio"]:checked');
+      if (selectedOption) {
+        totalAmount += 10;  // Each question is worth 10 sh
+      }
+    });
+
+    // If all questions are filled out, show the completion message
+    if (totalAmount === questions.length * 10) {
+      alert('You have earned ' + totalAmount + ' sh for completing the survey.');
+      showContent('payment');  // Show payment section after completing survey
+    } else {
+      alert('Please answer all the questions to complete the survey.');
+    }
+  }
+
+  // Function to handle payment processing
+  function processPayment() {
+    const phoneNumber = document.getElementById('phone-number').value;
+    const paymentAmount = 99;  // Fixed amount
+
+    // Validate the phone number format (should start with +254)
+    if (!phoneNumber.startsWith('07') || phoneNumber.length !== 10) {
+      alert("Please enter a valid phone number starting with 07.");
+      return;
+    }
+
+    alert(`Redirecting to MPesa for payment of ${paymentAmount} sh. Phone Number: ${phoneNumber}`);
+    // Simulate payment redirection (in reality, you'd use an API like Safaricom's Lipa na M-Pesa API)
+    window.location.href = `https://mpesa.com/transfer?amount=${paymentAmount}&to=+254784290853&from=${phoneNumber}`;
+  }
+</script>
+
+
+
+</body></html>
